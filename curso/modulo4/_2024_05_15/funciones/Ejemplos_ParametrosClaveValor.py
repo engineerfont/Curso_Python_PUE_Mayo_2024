@@ -29,7 +29,7 @@ print('-' * 80)
 # Las funciones con parámetros de clave/valor también se pueden
 # combinar con parámetros por posición
 def suma_multi_por_valor(valor, **kwargs):
-    suma = 0;
+    suma = 0
     for key, value in kwargs.items():
         suma += value * valor
     return suma
@@ -80,7 +80,7 @@ print("procesar -> rdo3 =>", rdo3)
 
 print('-' * 80)
 
-# Función con todo tipo de parámetros
+# Con distintos tipos de parámetros
 def suma_todo(w, y=1, *args, **kwargs):
     suma = 0
     suma += w
