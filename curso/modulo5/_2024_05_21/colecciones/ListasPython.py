@@ -9,6 +9,8 @@
 # Son mutables, ya que sus elementos pueden ser modificados.
 # Son dinámicas, ya que se pueden añadir o eliminar elementos.
 
+vacia = []
+
 # Creación de listas
 numeros_lista = [2,3,4,5,6]
 numeros_edades = [34, 45, 20, 19, 19, 54, 43, 26, 28]
@@ -51,7 +53,7 @@ print('-' * 80)
 # en una posición indicada
 
 # Número de la posición en positivo
-lista.insert(3, 13)
+lista.insert(0, 13)
 print("(insert) Valor de lista =>", lista)
 
 # Número de la posición en negativo
@@ -83,11 +85,13 @@ print('-' * 80)
 # Eliminar un elemento por medio de la función 'pop'
 # La función 'pop' elimina el último elemento de una lista
 # y devuelve dicho elemento
+print("(pop) Valores de la lista =>", lista)
 ultimo = lista.pop()
 print("(pop) Último elemento de la lista =>", ultimo)
 print("(pop) Valores de la lista =>", lista)
 
 print('-' * 80)
+
 
 # La función 'pop(posición_del_elemento)' elimina el elemento
 # en la posición indicada de la lista y devuelve el elemento
@@ -110,6 +114,7 @@ print('-' * 80)
 # La función remove elimina el primer elemento que encuentre
 # de la lista, en caso de que haya elementos repetidos.
 # En caso de que no encuentre el elemento lanza una excepción
+print("(remove) Valores de la lista =>", lista)
 lista.remove(4)
 print("(remove) Valores de la lista =>", lista)
 
@@ -139,6 +144,7 @@ print('-' * 80)
 # Obtener un rango de elementos dentro de una lista
 
 # ----------- Rangos en positivo
+print("(rango positivo) Valores =>", lista)
 valores = lista[1:5]
 print("(rango positivo) Valores =>", valores)
 
@@ -147,10 +153,14 @@ print("(rango positivo) Valores =>", valores)
 valores = lista[2:]
 print("(rango positivo) Valores =>", valores)
 
+valores = lista[:8]
+print("(rango positivo) Valores =>", valores)
+
 # Rangos de elementos desde una posición inicial hasta
 # el final de la lista por medio de saltos entre elementos
 valores = lista[1:5:2]
 print("(rango positivo saltos) Valores =>", valores)
+valores = lista[::-1]
 
 # ----------- Rangos en negativo
 valores = lista[-4:-1]
@@ -169,7 +179,7 @@ print("(rango negativo saltos) Valores =>", valores)
 print('-' * 80)
 
 # ---------------- Misceláneo de funciones con listas --------------
-
+'''
 # Obtener la posición de un determinado elemento dentro de la lista
 # Si no encuentra el elemento lanza una excepción
 posicion = lista.index(13)
@@ -187,8 +197,9 @@ print("(posición elemento) Posición =>", posicion)
 posicion = lista.index(13, 2, 9)
 print("(posición elemento) Posición =>", posicion)
 
-print('-' * 80)
 
+print('-' * 80)
+'''
 # Ordenar una lista de manera ascendente
 orden = lista.sort()
 print("(ordenar ascendente) Valores de la lista =>", lista)
@@ -200,7 +211,9 @@ print("(ordenar descendente) Valores de la lista =>", lista)
 # Ordenar una lista en función de una determinada clave
 # la clave debe de ser una función a aplicar en la ordenación
 # Ordenar una lista en función del número de caracteres de cada elemento
+
 lenguajes = ['go', 'python', 'java', 'julia', 'scala', 'c#', 'c++', 'R']
+print("(ordenar por clave) Valores de la lista lenguajes =>", lenguajes)
 lenguajes.sort(key=len)
 print("(ordenar por clave) Valores de la lista lenguajes =>", lenguajes)
 
@@ -216,6 +229,7 @@ print('-' * 80)
 # Copiar una lista modificando la lista original
 antigua = [1, 2, 3]
 nueva = antigua
+
 expandir = nueva
 expandir.extend([45, 99])
 nueva.append('a')
@@ -248,4 +262,3 @@ print("(reverse) Valores de la lista =>", numeros[::-1])
 numeros = [1, 2, 3, 4, 5]
 existe = 3 in numeros
 print('Existe =>', existe)
-

@@ -26,6 +26,7 @@ print('-' * 80)
 s = set([5, 6, 7, 8])
 #s[0] = 3 #Error! TypeError
 
+
 # Los elementos de un set deben ser inmutables, por lo que un elemento
 # de un set no puede ser ni un diccionario ni una lista.
 s = set([5, 6, 7, 8, 7, 7])

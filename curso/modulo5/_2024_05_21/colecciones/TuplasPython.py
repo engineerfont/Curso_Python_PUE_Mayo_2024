@@ -20,6 +20,7 @@ print(tupla) #(1, 2, 3)
 tupla = 1, 2, 3
 print(type(tupla)) #<class 'tuple'>
 print(tupla)       #(1, 2, 3)
+print(tupla[1])
 
 # Al igual que las listas, las tuplas también pueden ser anidadas.
 tupla = 1, 2, ('a', 'b'), 3
@@ -56,6 +57,17 @@ cociente, resta, mayor = (2.5, 10, False)
 print(cociente)
 print(resta)
 print(mayor)
+
+cociente, _, mayor = (2.5, 10, False)
+print(cociente)
+print(mayor)
+
+r1 = 8
+r2 = 7
+r3 = 6
+
+nueva = r1, r2, r3
+print(type(nueva))
 
 
 # Comprobar si un determinado valor está en una tupla

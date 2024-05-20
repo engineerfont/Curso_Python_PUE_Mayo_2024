@@ -27,6 +27,7 @@ print(dicc)
 dicc = dict([('Nombre', 'Sara'), ('Edad', 27), ('Documento', 1003882)])
 print(dicc)
 
+
 # También es posible usar el constructor dict() para crear un diccionario.
 dicc = dict(Nombre='Sara', Edad=27, Documento=1003882)
 print(dicc)
@@ -38,6 +39,7 @@ print('-' * 80)
 # Se puede acceder a sus elementos con [] o también con la función get()
 print(dicc['Nombre'])     #Sara
 print(dicc.get('Nombre')) #Sara
+
 
 # Para modificar un elemento basta con usar [] con el nombre del key y
 # asignar el valor que queremos.
@@ -65,11 +67,11 @@ for clave in dicc:
     print("Valor =>", dicc[clave])
 
 # Mostrar el key y el value a la vez.
-for x, y in dicc.items():
+for x, y in dicc.items(): #[(k,v), (k,v), (k,v), (k,v)]
     print("Clave =>",x, "Valor=>", y)
 
 print('-' * 80)
-
+'''
 # Los diccionarios en Python pueden contener uno dentro de otro.
 anidado1 = {"a": 1, "b": 2}
 anidado2 = {"a": 1, "b": 2}
@@ -145,3 +147,4 @@ print("Update", d2)
 d2['D'] = 500
 print(d2)
 
+'''
