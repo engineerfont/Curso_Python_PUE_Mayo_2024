@@ -38,7 +38,6 @@ def cambiar_directorio(directorio):
     except FileNotFoundError as fnfe:
         print('El directorio no existe')
 
-
 # Elimina el directorio, lanza una excepción si el directorio no existe
 def eliminar_directorio(directorio):
     try:
@@ -161,9 +160,9 @@ def tamanho_bytes(directorio):
 def data(file):
     stat = os.stat(file)
     data = {}
-    dirname, basename = os.path.split(file)
-    data['path'] = dirname
-    data['name'] = basename
+    path, name = os.path.split(file)
+    data['path'] = path
+    data['name'] = name
     data['file'] = file
     data['size'] = stat.st_size
     data['access'] = datetime.datetime.fromtimestamp(stat.st_atime)
