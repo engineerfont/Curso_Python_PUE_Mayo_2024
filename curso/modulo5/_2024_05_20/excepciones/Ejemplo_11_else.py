@@ -1,5 +1,5 @@
 try:
-    y = 1 / 2
+    y = 1 / 0
 except:
     print("¡División entre Cero!")
 else:

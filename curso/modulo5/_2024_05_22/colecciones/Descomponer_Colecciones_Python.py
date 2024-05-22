@@ -9,13 +9,15 @@ def mostrar(**valores):
 
 # Descomposición de colecciones tipo 'list', 'tuple', 'set'
 # Para descomponer una colección en series de valores utilizaremos el '*'
-numeros = {2,3,4}
+s2 = suma(2,3,4,5,56,6)
+numeros = (2,3,4)
 s = suma(*numeros)
 print(s)
 
 # Descomposición de colecciones tipo 'dict'
 # Para descomponer un diccionario en series de valores utilizaremos el '**'
 datos = {"nombre": "Mia", "edad": 4, "ciudad": "Burgos"}
+r = mostrar(x=4, b=6, m=6)
 d = mostrar(**datos)
 print(d)
 
@@ -39,7 +41,8 @@ def to_abc(texto):
     special_5 = {chr(n): '' for n in range(123, 128)}
 
     chars = {
-        **{a: 'a' for a in 'áàâäã'}, **ees, **ies, **oes, **ues, **letters,
+        **aes, # 'á'='a', 'à'='a','â'='a'
+        **ees, **ies, **oes, **ues, **letters,
         **special_1, **special_2, **special_3,
         **special_4, **special_5
     }
