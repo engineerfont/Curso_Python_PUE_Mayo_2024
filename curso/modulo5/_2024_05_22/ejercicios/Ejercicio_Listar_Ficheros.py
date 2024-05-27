@@ -24,8 +24,8 @@ def dir_files_tree(dir, files=[]):
     return files
 
 # Mostrar todos los subdirectorios de un directorio
-for f in dir_dirs_tree('c:/datasets/'):
-    print(f)
+#for f in dir_dirs_tree('c:/datasets/'):
+#    print(f)
 
 # Mostrar todos los archivos de un directorio y de todos sus subdirectorios
 for f in dir_files_tree('c:/datasets/'):

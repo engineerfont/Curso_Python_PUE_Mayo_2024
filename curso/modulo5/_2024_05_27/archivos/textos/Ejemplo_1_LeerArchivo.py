@@ -30,7 +30,7 @@ def leer_archivo_por_caracter(nombre, encoding='utf-8'):
 
 def leer_archivo_por_linea(nombre, encoding='utf-8'):
     try:
-        # \r\n o \n
+        # \r\n o \n o \t
         fichero = open(nombre, 'r', encoding=encoding)
         linea = fichero.readline()
         linea = linea.strip()   # trim -> Java, C#, JavaScript, explode (php)
@@ -81,7 +81,9 @@ def ejemplos_leer_archivos():
 #leer_archivo_entero('c:/datasets/data/texto.txt.txt', 'iso-8859-1')
 #leer_archivo_por_caracter('c:/datasets/data/texto.txt.txt', 'iso-8859-1')
 #leer_archivo_por_linea('c:/datasets/data/nombres.data')
-leer_archivo_por_lineas('c:/datasets/data/nombres.data')
+#leer_archivo_por_lineas('c:/datasets/data/nombres.data')
+
+ejemplos_leer_archivos()
 
 '''texto = 'tttttttextotttttttxxxxxxxxxxxxx\n\n\n'
 print(len(texto), texto)
