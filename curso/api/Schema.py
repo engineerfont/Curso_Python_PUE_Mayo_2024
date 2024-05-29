@@ -9,7 +9,7 @@ SCHEMA_PROVINCIA['idccaa'] = int
 
 SCHEMA_POBLACION = {}
 SCHEMA_POBLACION['id'] = int
-SCHEMA_POBLACION['poblacion'] = str
+SCHEMA_POBLACION['municipio'] = str
 SCHEMA_POBLACION['idprovincia'] = int
 
 SCHEMA_HOUSING = {}

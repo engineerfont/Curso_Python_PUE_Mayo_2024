@@ -23,3 +23,6 @@ def suma_valores(*parms1, **params2):
     for key, value in params2.items():
         suma += value
     return suma
+
+def es_bisiesto(anho):
+    return anho % 400 == 0 or (anho % 100 != 0 and anho % 4 == 0)

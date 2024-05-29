@@ -5,22 +5,13 @@ def dir_files(dir):
     return [os.path.join(dir, file) for file in os.listdir(dir) if os.path.isfile(os.path.join(dir, file))]
 
 def dir_files_tree(dir):
-    lista = []
-    for (d, _, files) in os.walk(dir):
-        for file in files:
-            lista.append(os.path.join(d, file))
-    # [os.path.join(d, file) for (d, _, files) in os.walk(dir) for file in files]
-    return lista
+    return [os.path.join(d, file) for (d, _, files) in os.walk(dir) for file in files]
 
 def dir_dirs(dir):
     return [os.path.join(dir, file) for file in os.listdir(dir) if os.path.isdir(os.path.join(dir, file))]
 
 def dir_dirs_tree(dir):
-    lista = []
-    for (d, _, _) in os.walk(dir):
-        lista.append(d)
-    # [d for (d, _, files) in os.walk(dir)]
-    return lista
+    return [d for (d, _, files) in os.walk(dir)]
 
 def data_dir(dir, recursive=False):
     lista = []
@@ -56,3 +47,24 @@ def file_text(filename, encoding='utf-8'):
     except:
         texto = ''
     return texto
+
+def save_file_text(filename, text, mode=None, encoding='utf-8'):
+    mode = mode if mode else 'w'
+    try:
+        path, _ = os.path.split(filename)
+        os.makedirs(path, exist_ok=True)
+        with open(filename, mode=mode, encoding=encoding) as file:
+            file.write(f'{text}\n')
+    except:
+        pass
+
+def save_file_list(filename, collection, mode=None, encoding='utf-8'):
+    mode = mode if mode else 'w'
+    try:
+        path, _ = os.path.split(filename)
+        os.makedirs(path, exist_ok=True)
+        with open(filename, mode=mode, encoding=encoding) as file:
+            data = map(lambda c: f'{c}\n', collection)
+            file.writelines(data)
+    except:
+        pass

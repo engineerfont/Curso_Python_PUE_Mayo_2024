@@ -24,5 +24,14 @@ def to_bool(value):
     except:
         return False
 
-def to_datetime(value):
-    pass
+def to_str(value):
+    try:
+        return str(value)
+    except:
+        return ''
+
+def to_date(value): # value = AAAA-MM-DD
+    try:
+        return datetime.date.fromisoformat(value)
+    except:
+        return None

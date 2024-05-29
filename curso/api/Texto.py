@@ -38,3 +38,17 @@ def to_abc(texto):
         texto = texto.replace(k, v)
 
     return texto
+
+def to_email(text):
+    text = to_abc(text).replace(' de ', ' ') \
+        .replace(' del ', ' ') \
+        .replace(' el ', ' ') \
+        .replace(' la ', ' ') \
+        .replace(' las ', ' ') \
+        .replace(' da ', ' ') \
+        .replace(' das ', ' ') \
+        .replace(' do ', ' ') \
+        .replace(' dos ', ' ') \
+        .replace(' lo ', ' ') \
+        .replace(' los ', ' ')
+    return '.'.join(text.split())
