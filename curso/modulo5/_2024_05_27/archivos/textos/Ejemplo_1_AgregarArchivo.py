@@ -2,10 +2,9 @@ from os import strerror
 
 def escribir_lineas(nombre, numero=20):
     try:
-        fichero = open(nombre, 'a')
-        for n in range(1, numero + 1):
-            fichero.write(f'Línea número {n}\n')
-        fichero.close()
+        with open(nombre, 'a') as fichero:
+            for n in range(1, numero + 1):
+                fichero.write(f'Línea número {n + 40}\n')
     except IOError as e:
         print(strerror(e.errno))
 
@@ -35,5 +34,5 @@ except:
 
 n = ['Luci', 'Marga']
 
-escribir_lineas('c:/datasets/data/lineas.txt')
-escribir_colecciones('c:/datasets/data/lineas.txt', n)
+escribir_lineas('c:/datasets/data/ejemplo_lineas_20.txt')
+#escribir_colecciones('c:/datasets/data/lineas.txt', n)

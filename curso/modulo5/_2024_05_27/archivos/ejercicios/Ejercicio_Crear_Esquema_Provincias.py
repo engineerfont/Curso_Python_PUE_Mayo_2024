@@ -10,22 +10,8 @@ def data_record(filename, header=False, schema=None, separator=None):
     separator = separator if separator else ';'
     names_header = ''
 
-    def tipo(type):
-        if type == int:
-            return Util.to_int
-        elif type == float:
-            return Util.to_float
-        elif type == complex:
-            return Util.to_complex
-        elif type == bool:
-            return Util.to_bool
-        elif type == datetime.date:
-            return Util.to_date
-        else:
-            return Util.to_str
-
     def convert_value(n, value):
-        return tipo(schema[names_header[n]])(value)
+        return schema[names_header[n]](value)
 
     def record(line):
         values = line.strip().split(separator)
@@ -42,12 +28,13 @@ def data_record(filename, header=False, schema=None, separator=None):
         if schema:
             names_header = schema.keys()
         else:
-            # names_header = [f'_c{i}' for i in range(len(fields))]
-            names_header = list(map(lambda s: f'_c{s}', range(len(fields))))
+           #names_header = [f'_c{i}' for i in range(len(fields))]
+            names_header = list(map(lambda n: f'_c{n}', range(len(fields))))
     #return [record(data) for data in data_file[1 if header else 0:]]
+    #return list(map(lambda g: record(g), data_file[1 if header else 0:]))
     return list(map(record, data_file[1 if header else 0:]))
 
-
-data = data_record('c:/datasets/data/provincias.data', header=True, schema=Schema.SCHEMA_PROVINCIA)
+data = data_record('c:/datasets/data/poblaciones.data', header=True, schema=Schema.SCHEMA_POBLACION)
 for d in data:
     print(d)
+

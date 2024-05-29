@@ -1,3 +1,4 @@
+
 SCHEMA_CCAA = {}
 SCHEMA_CCAA['id'] = int
 SCHEMA_CCAA['ccaa'] = str

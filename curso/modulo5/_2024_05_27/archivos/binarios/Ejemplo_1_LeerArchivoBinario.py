@@ -34,6 +34,6 @@ def leer_bytes(nombre, numeros=10):
         print(strerror(e.errno))
 
 
-leer_numeros('c:/datasets/data/aleatorios.bin')
-#leer_bytes('c:/datasets/data/aleatorios.bin', 4)
-#leer('c:/datasets/data/aleatorios.bin', 6)
+#leer_numeros('c:/datasets/data/nomes.pdf')
+#leer_bytes('c:/datasets/data/nomes.pdf')
+leer('c:/datasets/data/nomes.pdf', 6)

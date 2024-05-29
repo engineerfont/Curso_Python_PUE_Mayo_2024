@@ -15,6 +15,7 @@ def download(url, name_file):
 
 
 url = 'https://www.pue.es/'
+url = 'https://www.pue.es/resources/images/logos/logo-pue-white.png'
 
-download(url, 'c:/datasets/data/html/pue.html')
+download(url, 'c:/datasets/data/html/logo_pue.png')
 print('Descargado')

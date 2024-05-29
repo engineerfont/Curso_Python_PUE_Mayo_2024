@@ -24,7 +24,7 @@ def quickSort(array):
 
 
 
-#numbers.sort()
+#numbers.sort(reverse=True)
 #print(numbers)
 
 #bubbleSort(numbers)
@@ -33,7 +33,7 @@ def quickSort(array):
 #numbers = quickSort(numbers)
 #print(numbers)
 
-ciudades = ['Girona', 'Alacant', 'Burgos', 'Palencia', 'Jaén', 'Ceuta']
+ciudades = ['Girona', 'Alacant', 'Burgos', 'barcelona', 'Palencia', 'Jaén', 'Ceuta']
 
 ciudades.sort()
 print(ciudades)
@@ -46,7 +46,7 @@ print(ciudades)
 tuplas = [(4, 6, 'x'), (1, 2, 'b'), (3, 8, 's'), (0, 5, 'm'), (5, 6, 'k')]
 
 # Ordenar la lista 'tuplas' en función del tercer elemento de la tupla
-tuplas.sort(key=lambda x: x[2])
+tuplas.sort(key=lambda x: x[1], reverse=True)
 print(tuplas)
 
 registro = [
@@ -57,7 +57,7 @@ registro = [
            ]
 
 # Ordenar la lista 'registro' en función del campo 'altura' y en orden descendente
-registro.sort(key=lambda x: x['altura'], reverse=True)
+registro.sort(key=lambda x: x['edad'])
 print(registro)
 
 persons =  [
@@ -67,8 +67,11 @@ persons =  [
             {"edad": 31, "altura": 1.73, "nombre": "Mía", "ciudad": "Barcelona"}
            ]
 
+def persona(dato, keys):
+    pass
+
 # Ordenar la lista 'persons' en función de los campos 'ciudad', 'nombre' y 'altura'
-fields = ['ciUdad', 'NOMBRE', 'Altura']
+fields = ['edad', 'altura']
 keys = persons[0].keys()
 persons.sort(key=lambda person: tuple(person[f.lower()] for f in fields if f.lower() in keys))
 print(persons)

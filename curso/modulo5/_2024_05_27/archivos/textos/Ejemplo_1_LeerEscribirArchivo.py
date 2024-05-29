@@ -11,4 +11,4 @@ def leer_archivo_entero(nombre):
     except IOError as e:
         print(strerror(e.errno))
 
-leer_archivo_entero('c:/datasets/data/lineas.txt')
+leer_archivo_entero('c:/datasets/data/ejemplo_lineas_20.txt')

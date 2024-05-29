@@ -6,6 +6,7 @@ def extract(html, atributo, urls=[]):
         return urls
     else:
         url = html[posicion:]
+        # href=http://www.doini.com>mi dominio ....
         url = url.split(' ')[0].split('>')[0].split('=')[1].strip()
         urls.append(url)
         html = html[posicion + len(atributo):]

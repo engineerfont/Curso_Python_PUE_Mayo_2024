@@ -40,5 +40,5 @@ def copiar(origen, destino):
     source_file.close()
     destination_file.close()
 
-#escribir_numeros('c:/datasets/data/aleatorios.bin')
-copiar('c:/datasets/data/aleatorios.bin', 'c:/datasets/data/aleas.bin')
+escribir_numeros('c:/datasets/data/aleatorios.bin')
+#copiar('c:/datasets/data/aleatorios.bin', 'c:/datasets/data/aleas.bin')
