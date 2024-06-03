@@ -14,3 +14,7 @@ def to_nif(number):
 
 def trim(text):
     return ' '.join(filter(lambda x: len(x) > 0, text.split()))
+
+def date_to_string(date):
+    return date.strftime('%Y_%m_%d')
+

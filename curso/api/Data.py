@@ -4,24 +4,17 @@ import curso.api.Input as Util
 
 def data_record(filename, header=False, schema=None, separator=None):
     separator = separator if separator else ';'
-    names_header = ''
-
-    def tipo(type):
-        if type == int:
-            return Util.to_int
-        elif type == float:
-            return Util.to_float
-        elif type == complex:
-            return Util.to_complex
-        elif type == bool:
-            return Util.to_bool
-        elif type == datetime.date:
-            return Util.to_date
+    data_file = File.list_file_text(filename)
+    fields = data_file[0].strip().split(separator)
+    names_header = fields
+    if not header:
+        if schema:
+            names_header = list(schema.keys())
         else:
-            return Util.to_str
+            names_header = list(map(lambda s: f'_c{s}', range(len(fields))))
 
     def convert_field(n, field):
-        return tipo(schema[names_header[n]])(field)
+        return schema[names_header[n]](field)
 
     def record(line):
         values = line.strip().split(separator)
@@ -30,15 +23,4 @@ def data_record(filename, header=False, schema=None, separator=None):
         else:
             return {names_header[i]: values[i] for i in range(len(values))}
 
-    data_file = File.list_file_text(filename)
-    fields = data_file[0].strip().split(separator)
-    if header:
-        names_header = fields
-    else:
-        if schema:
-            names_header = schema.keys()
-        else:
-            # names_header = [f'_c{i}' for i in range(len(fields))]
-            names_header = list(map(lambda s: f'_c{s}', range(len(fields))))
-    #return [record(data) for data in data_file[1 if header else 0:]]
     return list(map(record, data_file[1 if header else 0:]))

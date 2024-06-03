@@ -58,13 +58,16 @@ def save_file_text(filename, text, mode=None, encoding='utf-8'):
     except:
         pass
 
-def save_file_list(filename, collection, mode=None, encoding='utf-8'):
+def save_file_list(filename, collection, header=None, mode=None, encoding='utf-8'):
     mode = mode if mode else 'w'
     try:
         path, _ = os.path.split(filename)
         os.makedirs(path, exist_ok=True)
         with open(filename, mode=mode, encoding=encoding) as file:
+            if header:
+                file.write(header + '\n')
             data = map(lambda c: f'{c}\n', collection)
             file.writelines(data)
     except:
+        os.path.exists()
         pass
