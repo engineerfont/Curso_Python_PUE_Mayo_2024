@@ -1,6 +1,6 @@
 import os.path
 import time
-import app.python.api.Files as File
+#import app.python.api.Files as File
 
 def decorar_suma(funcion):
     def wrapper11(arg1, arg2):
@@ -35,7 +35,7 @@ def multiplica_resultado(numero):
 def suma_numeros_multiplicada(num_1, num_2):
     return num_1 + num_2
 
-
+'''
 # ---------------------------------------------------------------------------
 def mi_decorador(arg):
     def decorador_interno(funcion):
@@ -135,15 +135,15 @@ def multiplicar_resultado(*argumentos):
 @multiplicar_resultado(3, 4, 5)
 def sumatorio(*args):
     return sum(args)
-
+'''
 
 if __name__ == '__main__':
-    #print(suma_numeros(7, 9))
+    #print(resta_numeros(7, 9))
     #print(resta_numeros(9, 7))
-    #print(suma_numeros_multiplicada(8, 4))
+    print(suma_numeros_multiplicada(8, 4))
     #print(multiplica(9, 9))
     #ejemplo_logger()
     #print('division =>', division(40, 4))
-    print('sumas_numeros =>', sumas_numeros(5, 5, 5, 5, a=10, b=20, c=30))
+    #print('sumas_numeros =>', sumas_numeros(5, 5, 5, 5, a=10, b=20, c=30))
     #print(sumatorio(1, 2))
     pass

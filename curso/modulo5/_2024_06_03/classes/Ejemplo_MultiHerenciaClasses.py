@@ -6,13 +6,16 @@ class Volar:
     def mostrar(self):
         print('Puedo volar')
 
+
 class Nadar:
 
     def mostrar(self, a):
-        print('Puedo nadar')
+        print('Puedo nadar ' * a)
 
-class PezVolador(Nadar, Volar):
+
+class PezVolador(Volar, Nadar):
     pass
 
-pez = PezVolador()
-pez.mostrar()
+
+pez_volador = PezVolador()
+pez_volador.mostrar()
