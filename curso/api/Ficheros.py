@@ -1,5 +1,8 @@
 import os
 import datetime as dt
+from curso.api import Paths
+
+FILE_LOGS = Paths.RUTA_ARCHIVOS_MODIFICAR + 'fichero.log'
 
 def dir_files(dir):
     return [os.path.join(dir, file) for file in os.listdir(dir) if os.path.isfile(os.path.join(dir, file))]

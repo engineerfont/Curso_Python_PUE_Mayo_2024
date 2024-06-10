@@ -1,5 +1,5 @@
 # Definición de una classe Python y su constructor
-class Persona:
+class Persona(object):
 
     #self.pais = 'Portugal'
 
@@ -22,11 +22,13 @@ class Persona:
 
 #pedro = Persona()
 
-ana = Persona('Ana', 37)
+ana = Persona('Ana', 28)
+ana.show_edad()
+
 '''print(ana.ciudad)
 ana.datos()
 print(ana.pais)'''
-ana.show_edad()
+#ana.show_edad()
 
 '''luis = Persona('Luis', 39)
 print(luis.ciudad)

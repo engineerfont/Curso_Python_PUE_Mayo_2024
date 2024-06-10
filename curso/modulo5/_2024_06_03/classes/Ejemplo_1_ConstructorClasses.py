@@ -8,6 +8,7 @@ class Persona(object):
     def datos(self):
         print(f'Nombre = {self.nombre}, Edad = {self.edad}')
 
+
 ana = Persona()
 ana.nombre = 'Ana'
 ana.edad = 27
