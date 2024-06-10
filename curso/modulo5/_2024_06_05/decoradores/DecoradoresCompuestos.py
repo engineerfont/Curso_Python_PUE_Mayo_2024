@@ -3,6 +3,7 @@ def mayusculas(funcion):
         return funcion().upper()
 
     return wrapper
+    
 
 
 def invertir(funcion):
