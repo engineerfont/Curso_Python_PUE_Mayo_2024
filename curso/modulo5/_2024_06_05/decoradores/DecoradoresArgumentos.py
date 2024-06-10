@@ -1,6 +1,7 @@
 import os.path
 import time
-#import app.python.api.Files as File
+import curso.api.Ficheros as Files
+
 
 def decorar_suma(funcion):
     def wrapper11(arg1, arg2):
@@ -72,17 +73,17 @@ def log(fichero_log):
     return decorador_interno
 
 
-@log(File.FILE_LOGS)
+@log(Files.FILE_LOGS)
 def suma(a, b):
     return a + b
 
 
-@log(File.FILE_LOGS)
+@log(Files.FILE_LOGS)
 def resta(a, b):
     return a - b
 
 
-@log(File.FILE_LOGS)
+@log(Files.FILE_LOGS)
 def multiplicadivide(a, b, c):
     return a * b / c
 
