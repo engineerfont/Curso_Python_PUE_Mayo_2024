@@ -6,21 +6,21 @@ class Persona:
     def __init__(self, nombre='', edad=0):
         self.nombre = nombre
         self.edad = edad
-
+    
     def __str__(self):
         return f'Nombre = {self.nombre}, Edad = {self.edad}'
-
+    
     def __eq__(self, other):
         return self.nombre == other.nombre and self.edad == other.edad
-
+    '''
     def __lt__(self, other):
         return self.edad > other.edad
 
     def datos(self):
         print(f'Nombre = {self.nombre}, Edad = {self.edad}')
+    '''
 
-
-'''persona1 = Persona('Luca')
+persona1 = Persona('Luca')
 persona2 = Persona('Luca')
 
 if persona1 == persona2:
@@ -28,10 +28,11 @@ if persona1 == persona2:
 else:
     print('Son distintos')
 
-print('Hola => ' + str(persona1))
+#print('Hola => ' + str(persona1))
 
-print(persona1.__dir__())'''''
+#print(persona1.__dir__()
 
+'''
 class Point:
 
     def __init__(self, x=0.0, y=0.0):
@@ -64,3 +65,4 @@ c3 = c1 + c2
 print(c3)
 
 del c1
+'''

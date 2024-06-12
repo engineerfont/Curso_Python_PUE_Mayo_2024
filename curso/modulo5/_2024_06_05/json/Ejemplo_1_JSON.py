@@ -25,9 +25,9 @@ print(json_string)
 
 c_json = json.loads(json_string)
 print(c_json)
-#print(type(c_json))
+print(type(c_json))
 
-#c_json['fecha'] = datetime.datetime.fromtimestamp(float(c_json['fecha']))
-#print(c_json)
+c_json['fecha'] = datetime.datetime.fromtimestamp(float(c_json['fecha']))
+print(c_json)
 
 print(to_schema(c_json))
